@@ -43,7 +43,6 @@ def test_add_product_to_card():
     home_page.select_region()
     home_page.find_product(product)
     home_page.add_to_card()
-    browser.config.timeout = 3
     home_page.go_to_card()
     home_page.check_product_in_card(product)
 
@@ -54,7 +53,6 @@ def test_clear_card():
     home_page.select_region()
     home_page.find_product(product)
     home_page.add_to_card()
-    browser.config.timeout = 3
     home_page.go_to_card()
     home_page.clear_card()
     home_page.check_cleared_card()
@@ -66,7 +64,6 @@ def test_add_favorite():
     home_page.select_region()
     home_page.find_product(product)
     home_page.add_to_favorites()
-    browser.config.timeout = 3
     home_page.go_to_favorites()
     home_page.check_favorites(product)
 
@@ -77,7 +74,6 @@ def test_cleared_favorites():
     home_page.select_region()
     home_page.find_product(product)
     home_page.add_to_favorites()
-    browser.config.timeout = 3
     home_page.go_to_favorites()
     home_page.clear_favorite()
     home_page.check_cleared_favorites()

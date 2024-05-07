@@ -55,7 +55,7 @@ class OpenPage:
 
     def clear_card(self):
         with allure.step("Clear card"):
-            browser.element('.CartItemTop_remove__nJxl_').click()
+            browser.element('.CartItemTop_remove__nJxl_').should(be.visible).click()
 
     def check_cleared_card(self):
         with allure.step("Check cleared card"):
@@ -76,7 +76,7 @@ class OpenPage:
 
     def clear_favorite(self):
         with allure.step("Clear favorite list"):
-            browser.element('[data-testid="heart-button"]').click()
+            browser.element('[data-testid="heart-button"]').should(be.visible).click()
 
     def check_cleared_favorites(self):
         with allure.step("Check cleared favorite list"):
