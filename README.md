@@ -1,2 +1,1 @@
-# alser_tests
-Autotesting of the alser.kz online store
+# Autotesting of the online store technodom.kz
