@@ -12,7 +12,6 @@
 <li><a href="#test-example">Example of passing test</a></li>
 <li><a href="#telegram-notification">Telegram notifications</a></li>
 
----
 
 <h2 id="tools"> ⚙️ Tools</h2>
 <div align="center">
@@ -32,7 +31,6 @@
 <li><a><b>Selenoid</b> is used to launch the browser</a>
 <li><a><b>Allure report</b> is generated and sent notifications to the telegram chat</a>
 
----
 
 <h2 id="tests"> 🐞 Tests</h2>
 
@@ -44,8 +42,6 @@
 <li><a> Add to favorites</a>
 <li><a> Removing from favorites</a>
 
-
----
 
 <h2 id="run-tests"> 🏃‍♂️ Run tests</h2>
 
@@ -59,7 +55,6 @@
     BROWSER_VERSION - browser version in which the tests will be run
 </p>
 
----
 
 <p>To run tests in Jenkins you need to click on <b>Build with Parameters</b> button</p>
 <p>Сhoose parameters (<i>BROWSER_VERSION</i>) and click on <b>"Build"</b> button</p>
@@ -68,12 +63,10 @@
 <img src="design/screenshot_2.png" alt="allure-report">
 <img src="design/screenshot_3.png" alt="allure-result">
 
----
 
 <h2 id="test-example"> 🗒️ Example of passing search of company test</h2>
 <img src="design/example.gif" alt="test">
 
----
 
 <h2 id="telegram-notification"> 🔔 Telegram notifications</h2>
 <img src="design/screenshot_4.png" alt="report-telegram">
