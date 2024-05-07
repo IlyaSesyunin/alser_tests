@@ -27,22 +27,22 @@
     <img title="Github" width="40" src="design/github.png">
     <img title="Telegram" width="40" src="design/telegram.png">
 </div>
-<li><p>Autotests are written in the <b>Python</b> programming language and run in the <b>Selenide</b> virtual environment</p><li>
-<li><p>Tests are run from <b>Jenkins</b></p><li>
-<li><p><b>Selenoid</b> is used to launch the browser</p><li>
-<li><p><b>Allure report</b> is generated and sent notifications to the telegram chat</p><li>
+<li><p>Autotests are written in the <b>Python</b> programming language and run in the <b>Selenide</b> virtual environment</p>
+<li><p>Tests are run from <b>Jenkins</b></p>
+<li><p><b>Selenoid</b> is used to launch the browser</p>
+<li><p><b>Allure report</b> is generated and sent notifications to the telegram chat</p>
 
 ---
 
 <h2 id="tests"> 🐞 Tests</h2>
 
-<li><p> Change correct region</p><li>
-<li><p> Change incorrect region</p><li>
-<li><p> Searching products</p><li>
-<li><p> Add to cart</p><li>
-<li><p> Removing from cart</p><li>
-<li><p> Add to favorites</p><li>
-<li><p> Removing from favorites</p><li>
+<li><p> Change correct region</p><
+<li><p> Change incorrect region</p>
+<li><p> Searching products</p>
+<li><p> Add to cart</p>
+<li><p> Removing from cart</p>
+<li><p> Add to favorites</p>
+<li><p> Removing from favorites</p>
 
 
 ---
