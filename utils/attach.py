@@ -1,8 +1,6 @@
-import os
 import allure
 from allure_commons.types import AttachmentType
 
-url_video = os.getenv('URL_VIDEO')
 
 def add_screenshot(browser):
     png = browser.driver.get_screenshot_as_png()
