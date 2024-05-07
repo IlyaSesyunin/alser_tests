@@ -5,13 +5,12 @@ import allure
 class OpenPage:
     def open(self):
         with allure.step("Open home page"):
-            browser.open('https://www.technodom.kz/')
+            browser.open("https://www.technodom.kz/")
             return self
 
     def find_region(self, region):
         with allure.step("Find the region"):
-            browser.element('.FieldNext.FieldNext_Size-L.FieldNext_WithLeftIcon.FieldNext_WithRightIcon'
-                            '.CitiesModal_search__xAZXc').should(be.blank).type(region.name_region)
+            browser.element('#CitiesModalSearch').should(be.blank).type(region.name_region)
 
     def select_region(self):
         with allure.step("Select region"):
