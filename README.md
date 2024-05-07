@@ -36,13 +36,13 @@
 
 <h2 id="tests"> 🐞 Tests</h2>
 
-<li><p> Change correct region</p><
-<li><p> Change incorrect region</p>
-<li><p> Searching products</p>
-<li><p> Add to cart</p>
-<li><p> Removing from cart</p>
-<li><p> Add to favorites</p>
-<li><p> Removing from favorites</p>
+<li><a> Change correct region</a>
+<li><a> Change incorrect region</a>
+<li><a> Searching products</a>
+<li><a> Add to cart</a>
+<li><a> Removing from cart</a>
+<li><a> Add to favorites</a>
+<li><a> Removing from favorites</a>
 
 
 ---
