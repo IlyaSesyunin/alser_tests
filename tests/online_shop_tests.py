@@ -1,3 +1,4 @@
+import allure
 from model.pages.home_page import home_page
 from data.regions import DataRegion
 from data.products import DataProduct
@@ -10,6 +11,8 @@ product = DataProduct(
 )
 
 
+@allure.tag('web')
+@allure.title('Successful a region change to an existing')
 def test_change_region_correct():
     home_page.open()
     home_page.find_region(region)
