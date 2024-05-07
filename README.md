@@ -27,10 +27,10 @@
     <img title="Github" width="40" src="design/github.png">
     <img title="Telegram" width="40" src="design/telegram.png">
 </div>
-<li><p>Autotests are written in the <b>Python</b> programming language and run in the <b>Selenide</b> virtual environment</p>
-<li><p>Tests are run from <b>Jenkins</b></p>
-<li><p><b>Selenoid</b> is used to launch the browser</p>
-<li><p><b>Allure report</b> is generated and sent notifications to the telegram chat</p>
+<li><a>Autotests are written in the <b>Python</b> programming language and run in the <b>Selenide</b> virtual environment</a>
+<li><a>Tests are run from <b>Jenkins</b></a>
+<li><a><b>Selenoid</b> is used to launch the browser</a>
+<li><a><b>Allure report</b> is generated and sent notifications to the telegram chat</a>
 
 ---
 
