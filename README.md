@@ -56,7 +56,7 @@
     pytest . --browser_version=${BROWSER_VERSION}
 </pre>
 <p><b>Parameters</b>: 
-    <li>BROWSER_VERSION - browser version in which the tests will be run</li>
+    BROWSER_VERSION - browser version in which the tests will be run
 </p>
 
 ---
