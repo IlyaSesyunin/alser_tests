@@ -3,7 +3,7 @@ import pytest
 from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from utils import attach
+from technodom_tests.utils import attach
 from dotenv import load_dotenv
 
 DEFAULT_BROWSER_VERSION = "100.0"
@@ -26,6 +26,15 @@ def setup_browser(request):
     browser_version = request.config.getoption('--browser_version')
     browser_version = browser_version if browser_version != "" else DEFAULT_BROWSER_VERSION
     options = Options()
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--incognito")
+
+    options.add_argument("--disable-notifications")
+    options.add_argument("--disable-popup-blocking")
+    options.add_argument("--disable-infobars")
+    options.add_argument("--disable-notifications-prompt")
     selenoid_capabilities = {
         "browserName": "chrome",
         "browserVersion": browser_version,
@@ -38,15 +47,16 @@ def setup_browser(request):
 
     login = os.getenv('LOGIN')
     password = os.getenv('PASSWORD')
-    url = os.getenv('URL')
+    url = os.getenv('URL_SELENOID')
 
     driver = webdriver.Remote(
-        command_executor=f"https://{login}:{password}@{url}",
+        command_executor=f"https://{login}:{password}@{url}/wd/hub",
         options=options
     )
-
+    browser.config.base_url = 'https://www.technodom.kz'
     browser.config.window_width = 1920
     browser.config.window_height = 1080
+    browser.config.timeout = 8.0
     browser.config.driver = driver
     yield browser
 

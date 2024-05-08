@@ -1,8 +1,7 @@
 import allure
-from model.pages.home_page import home_page
-from data.regions import DataRegion
-from data.products import DataProduct
-from selene import browser
+from technodom_tests.pages.home_page import home_page
+from technodom_tests.data.regions import DataRegion
+from technodom_tests.data.products import DataProduct
 
 region = DataRegion(name_region='Астана')
 product = DataProduct(

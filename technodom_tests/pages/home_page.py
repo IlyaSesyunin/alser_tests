@@ -5,8 +5,7 @@ import allure
 class OpenPage:
     def open(self):
         with allure.step("Open home page"):
-            browser.open("https://www.technodom.kz/")
-            return self
+            browser.open("/")
 
     def find_region(self, region):
         with allure.step("Find the region"):
@@ -14,7 +13,7 @@ class OpenPage:
 
     def select_region(self):
         with allure.step("Select region"):
-            browser.element('.Typography.CitiesList_name__6yw7D.Typography__Body').click()
+            browser.element('[data-testid="citiesList"] .CitiesList_listItem__dVrVg').click()
 
     def check_changed_region_correct(self, region):
         with allure.step("Check correct changed region"):
@@ -28,34 +27,31 @@ class OpenPage:
     def find_product(self, product):
         with allure.step("Find product"):
             browser.element('#SearchInput').type(product.name).press_enter()
-            browser.element(
-                '.ProductCardV_titleWrapper__x5c25 .Typography.ProductCardV_title__U38HX.ProductCardV_loading___io2a'
-                '.Typography__M').click()
+            browser.element('[data-testid="product-title"]').click()
 
     def check_found_product(self, product):
         with allure.step("Check found product"):
-            browser.element('.Typography.Typography__XL.Typography__XL_Bold').should(
-                have.text(product.name))
-            browser.element('.ProductActions_price__BnEwP').should(have.text(product.price))
+            browser.element('h1.Typography').should(have.text(product.name))
+            browser.element('[data-testid="product-price"]').should(have.text(product.price))
             browser.element('.ProductActions_ratingGuarantee__kN3uy').should(have.text(f'Артикул: {product.code}'))
 
     def add_to_card(self):
         with allure.step("Add product to the card"):
-            browser.element('.ButtonNext_Theme-Secondary.BuyButtons_addToCart__M6fVx').click()
+            browser.element('[data-testid="buy-buttons"]').click()
 
     def go_to_card(self):
         with allure.step("Go to the card"):
-            browser.element('.ButtonNext_Link.AddedToCartModal_button__cwKMJ').click()
+            browser.element('[data-testid="add-to-cart-modal"] .AddedToCartModal_button__cwKMJ').click()
 
     def check_product_in_card(self, product):
         with allure.step("Check product in the card"):
-            browser.element('.ProductCardInfoPriceBonus_title__scNbc.Typography__Body').should(
+            browser.element('[data-testid="cart-product-item"] .ProductCardInfoPriceBonus_title__scNbc').should(
                 have.text(product.name))
             browser.element('[data-plw="cart-product-price"]').should(have.text(product.price))
 
     def clear_card(self):
         with allure.step("Clear card"):
-            browser.element('.CartItemTop_remove__nJxl_').should(be.visible).click()
+            browser.element('[data-testid="delete-checked-products"]').should(be.visible).click()
 
     def check_cleared_card(self):
         with allure.step("Check cleared card"):
